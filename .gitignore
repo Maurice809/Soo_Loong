@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+**/util
+*.o
+a.out
+*.a
