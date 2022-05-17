@@ -20,6 +20,9 @@ int	ft_check(char *path)
 		return (0);
 	file = ft_strrchr(path, '.');
 	if (file == NULL || ft_strcmp(".ber", file) != 0)
-		return (0);
+  {
+		ft_printf("%s",ft_check_file(fd));
+    return (0);
+  }
 	return (1);
 }

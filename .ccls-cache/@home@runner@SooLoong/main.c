@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 		return (ft_error());
 	if (ft_check(argv[1]))
 	{
+    
 		ft_printf("game\n");
 	}
 	else

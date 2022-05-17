@@ -12,5 +12,7 @@ int	ft_check(char *s);
 int ft_strcmp(char *s1, char *s2);
 char	*ft_strrchr(const char *s, int c);
 size_t	ft_strlen(const char *str);
+char *ft_strjoin(char *s, char c);
+int ft_check_file(int fd);
 
 #endif

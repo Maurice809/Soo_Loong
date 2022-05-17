@@ -20,9 +20,9 @@
 int		ft_printf(const char *input, ...);
 void		ft_putchar(char c, int *count);
 int		ft_putnbr(long nbr, int *count, int base, char input);
-int		ft_putptr(unsigned long nbr, int *count);
+void	ft_putptr(unsigned long nbr, int *count);
 void	ft_args(va_list args, char input, int *count);
-int		ft_putstr(char *str, int *count);
+void	ft_putstr(char *str, int *count);
 int		ft_nbr(long nbr, int base, char input, int *count);
 int	ft_printf(const char *input, ...);
 
