@@ -1,10 +1,6 @@
 #ifndef FT_CHECK_FILE_H
 #define FT_CHECK_FILE_H
 
-#ifndef NULL
-#define NULL (0)
-#endif
-
 #include <sys/types.h>
 #include <sys/uio.h>
 #include <unistd.h>

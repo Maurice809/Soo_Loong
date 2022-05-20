@@ -1,3 +1,5 @@
+#include "ft_check_file.h"
+
 char *ft_strjoin(char *s, char c)
 {
   char *str;

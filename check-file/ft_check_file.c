@@ -19,6 +19,7 @@ int ft_check_file(int fd)
 		free(line);
 		return NULL;
 	}
-  printf("%s",line);
+  printf("%s\n",line);
+  
 	return (0);	
 }
