@@ -51,7 +51,7 @@ int ft_check_file(int fd)
     write(1,&line[i],1);
     if (line[i] == '0')
       cratc++;
-    if (line[i] != '1')
+    if (line[i] == '1')
       cratc++;
     if (line[i] == 'P')
     {
@@ -99,5 +99,5 @@ int ft_check_file(int fd)
   printf("nombre de diamond : %d\n", diams);
   printf("nombre de sortie  : %d\n", exit);
   printf("mombre erreur     : %d\n", erreur);
-	return (0);	
+	return (erreur);	
 }
