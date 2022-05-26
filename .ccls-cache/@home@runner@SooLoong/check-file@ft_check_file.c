@@ -37,6 +37,67 @@ int ft_check_file(int fd)
   ii = i / cn;
   printf("nombre de ligne   : %d\n", ii);
   printf("mombre erreur     : %d\n", erreur);
+
+  i = -1;
+  int v = 0;
+  int b = 1;
+  int player = 0;
+  int diams = 0;
+  int exit = 0;
+  int cratc = 0;
   
+  while(line[++i])
+  {
+    write(1,&line[i],1);
+    if (line[i] == '0')
+      cratc++;
+    if (line[i] != '1')
+      cratc++;
+    if (line[i] == 'P')
+    {
+      player++;
+      cratc++;
+    }
+    if (line[i] == 'C')
+    {
+      diams++;
+      cratc++;
+    }
+    if (line[i] == 'E')
+    {
+      exit++;
+      cratc++;
+    }
+    if (v == 0 && line[i] != '1')
+    {
+      erreur++;
+      write(1,"|",1);
+    }
+    ++v;
+    if (v == cn && line[i] != '1') 
+    {
+      erreur++;
+      write(1,"|",1);
+    }
+    
+    if (v == cn)
+    {
+      v = 0;
+      ++b;
+      write(1,"\n",1);
+    }
+    if (b == ii && line[i] != '1')
+      erreur++;
+  }
+  if (player > 1)
+    erreur++;
+  if (i != cratc)
+    erreur++;
+  printf("nombre de carater : %d\n", i);
+  printf("nombre de ctrl    : %d\n", cratc);
+  printf("nombre de player  : %d\n", player);
+  printf("nombre de diamond : %d\n", diams);
+  printf("nombre de sortie  : %d\n", exit);
+  printf("mombre erreur     : %d\n", erreur);
 	return (0);	
 }
