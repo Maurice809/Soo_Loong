@@ -45,32 +45,25 @@ while [ $ii -lt $2 ]
 do
 	while [ $i -lt $1 ]
 	do
-		if [[ $i -eq $p && $ii -eq $pp ]]
-		then
+		if [[ $i -eq $p && $ii -eq $pp ]]; then
 			line+="P"
-		elif [[ $i -eq $e && $ii -eq $ee ]]
-		then
-			line+="E"
-		elif [[ $i -eq 11 && $ii -eq 11 ]]
-		then
-			line+="C"
-		elif [[ $i -eq 12 && $ii -eq 12 ]]
-		then
-			line+="1"
-		else
-			o=$(( 1 + $RANDOM % 10 ))
-		if [[ $o -eq 4 ]]
-		then
-			line+="C"
-		elif [[ $o -eq 3 || $o -eq 6 || $o -eq 9 ]]
-		then
-			line+="1"
-		elif [[ $o -eq 8 && $eee -eq 3 ]]
-		then
-			line+="E"
-		else
-			line+="0"
-		fi
+			elif [[ $i -eq $e && $ii -eq $ee ]]; then
+				line+="E"
+			elif [[ $i -eq 11 && $ii -eq 11 ]]; then
+				line+="C"
+			elif [[ $i -eq 12 && $ii -eq 12 ]]; then
+				line+="1"
+			else
+				o=$(( 1 + $RANDOM % 10 ))
+			if [[ $o -eq 4 ]]; then
+				line+="C"
+			elif [[ $o -eq 3 || $o -eq 6 || $o -eq 9 ]]; then
+				line+="1"
+			elif [[ $o -eq 8 && $eee -eq 3 ]]; then
+				line+="E"
+			else
+				line+="0"
+			fi
 		fi
 		i=$[$i+1]
 	done
@@ -89,8 +82,8 @@ done
 echo $line >> tempo.ber
 cat tempo.ber
 date=$(date +%Y-%m-%d_%H%M%S)
-#cat tempo.ber | tr "\n" "$" | sed 's/.$//' | tr "$" "\n" >> game-$date.ber
-cat tempo.ber >> game-$date.ber
+cat tempo.ber | tr "\n" "$" | sed 's/.$//' | tr "$" "\n" >> game-$date.ber
+#cat tempo.ber >> game-$date.ber
 rm tempo.ber
 echo "-------------------------------"
 echo "|    MADE WITH LOVE BNK 48    |"
