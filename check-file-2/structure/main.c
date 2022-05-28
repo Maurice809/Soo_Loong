@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_file.h                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmoret <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/28 19:25:43 by tmoret            #+#    #+#             */
-/*   Updated: 2022/05/28 19:50:11 by tmoret           ###   ########.fr       */
+/*   Created: 2022/05/28 19:42:47 by tmoret            #+#    #+#             */
+/*   Updated: 2022/05/28 19:55:50 by tmoret           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CHECK_FILE_H
-# define FT_CHECK_FILE_H
+#include "ft_check_file.h"
 
-# include <sys/types.h>
-# include <sys/uio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <stdio.h>
-
-typedef struct Person
+int	main(void)
 {
-	char	*firstname;
-	char	*lastname;
-	int		age;
-}	t_Person;
+	struct Person	*me;
 
-void	ft_print(t_Person	*me);
-char	*ft_strjoin(char *s, char c);
-
-#endif
+	me = malloc(sizeof(t_Person));
+	me->firstname = "toto";
+	me->lastname = "tata";
+	me->age = 50;
+	ft_print(me);
+	printf("Name: %s\nLast Name: %s\nAge: %d\n",
+		me->firstname, me->lastname, me->age);
+	printf("ok\n\n");
+  free(me);
+	return (0);
+}

@@ -1,4 +1,4 @@
-cp M#ifndef FT_CHECK_FILE_H
+#ifndef FT_CHECK_FILE_H
 #define FT_CHECK_FILE_H
 
 #include <sys/types.h>
