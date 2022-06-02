@@ -8,7 +8,22 @@
 #include <fcntl.h>
 #include <stdio.h>
 
-int ft_check_file(int fd);
+typedef struct Game
+{
+	char *map;
+	int	carater;
+	int	colone;
+	int colone_temp;
+	int ligne;
+	int player;
+	int diams;
+	int exit;
+	int erreur;
+}	t_Game;
+
+void	ft_newgame(t_Game *info);
+void	 ft_check_file(int fd, t_Game *info);
+void	ft_check_map(t_Game *info);
 char *ft_strjoin(char *s, char c);
 
 #endif
