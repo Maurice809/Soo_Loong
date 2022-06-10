@@ -21,15 +21,18 @@ int main(int argv, char *argc[])
   printf("nombre de ct      : %d\n", info->colone_temp);
   info->ligne = info->carater / info->colone;
   printf("nombre de ligne   : %d\n", info->ligne);
-  printf("mombre erreur     : %d\n", info->erreur);
+  printf("mombre info->erreur     : %d\n", info->erreur);
 
+ft_check_map(info);
+  //  printf("nombre de carater : %d\n", i);
+  printf("nombre de ctrl    : %d\n", info->carater);
+  printf("nombre de info->player  : %d\n", info->player);
+  printf("nombre de diamond : %d\n", info->diams);
+  printf("nombre de sortie  : %d\n", info->exit);
+  printf("mombre info->erreur     : %d\n", info->erreur);
 
-    printf("nombre de carater : %d\n", i);
-  printf("nombre de ctrl    : %d\n", cratc);
-  printf("nombre de player  : %d\n", player);
-  printf("nombre de diamond : %d\n", diams);
-  printf("nombre de sortie  : %d\n", exit);
-  printf("mombre erreur     : %d\n", erreur);
+  ft_check_line(info);
+  printf("mombre info->erreur     : %d\n", info->erreur);
   free(info);
   return (0);
   }
